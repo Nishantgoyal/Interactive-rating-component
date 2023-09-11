@@ -80,6 +80,16 @@ form {
     border: none;
 }
 
+.rating_input:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.active {
+    background-color: var(--light_grey);
+    color: var(--white);
+}
+
 .submit {
     background-color: var(--orange);
     color: white;
