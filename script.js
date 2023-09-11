@@ -4,8 +4,11 @@ document.getElementById("rating_form").addEventListener(
     "submit",
     (event) => {
         event.preventDefault();
-        const rating = document.getElementsByClassName("active")[0].value;
-        console.log(`Choosen Rating: ${rating}`)
+        const activeEle = document.getElementsByClassName("active");
+        if (activeEle.length != 0) {
+            const rating = activeEle[0].value;
+            console.log(`Choosen Rating: ${rating}`)
+        }
     }
 );
 
@@ -16,10 +19,15 @@ for (const button of rating_input_buttons) {
     button.addEventListener("click", event => {
         event.preventDefault();
         const value = event.target.value;
-        const active = document.getElementsByClassName("active")[0];
-        if (active.value !== value) {
-            active.classList.toggle("active");
+        const active = document.getElementsByClassName("active");
+        if (active.length == 0) {
             event.target.classList.toggle("active");
+        } else {
+            const activeEle = active[0];
+            if (activeEle.value !== value) {
+                activeEle.classList.toggle("active");
+                event.target.classList.toggle("active");
+            }
         }
     });
 }
