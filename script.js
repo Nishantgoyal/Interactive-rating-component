@@ -7,7 +7,9 @@ document.getElementById("rating_form").addEventListener(
         const activeEle = document.getElementsByClassName("active");
         if (activeEle.length != 0) {
             const rating = activeEle[0].value;
-            console.log(`Choosen Rating: ${rating}`)
+            document.getElementById('rating_value').innerText = rating;
+            document.getElementById('rating_card').style.display = "none";
+            document.getElementById('result').style.display = "initial";
         }
     }
 );

@@ -38,6 +38,10 @@ body {
     border-radius: 50%;
 }
 
+.icon_thanks {
+    padding: 30px;
+}
+
 .icon img {
     width: 100%;
 }
@@ -97,4 +101,19 @@ form {
     margin-top: 30px;
     border: none;
     border-radius: 30px;
+}
+
+#result {
+    display: none;
+    text-align: center;
+}
+
+.result {
+    color: var(--orange);
+    background-color: var(--very_dark_blue);
+    margin: 0 60px;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
 }

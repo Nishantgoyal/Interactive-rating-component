@@ -23,8 +23,7 @@
 
 <body>
   <div class="container">
-    <div class="card">
-      <!-- Rating state start -->
+    <div id="rating_card" class="card">
       <div class="icon">
         <img src="images/icon-star.svg" alt="" srcset="">
       </div>
@@ -45,7 +44,15 @@
         </div>
         <button class="submit" type="submit">SUBMIT</button>
       </form>
-
+    </div>
+    <div id="result" class="card">
+      <div class="icon_thanks">
+        <img src="images/illustration-thank-you.svg" alt="" srcset="">
+      </div>
+      <div class="result">You selected <span id="rating_value"></span> out of 5</div>
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
+        touch!</p>
     </div>
   </div>
 </body>
